@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Espresso Yourself</title>
+  </head>
+  <body>
+    <div class="logo">
+      <p class="fontLogo">ESPRESSO YOURSELF</p>
+    </div>
+    <header>
+      <div class="topnav">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Drinks
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content container">
+            <a href="#" id="coffeeDrpDown">Coffee</a>
+            <a href="#" id="hcDrpDown">Hot Chocolate</a>
+            <a href="#" id="teaDrpDown">Teas</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Food
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content container">
+            <a href="#" id="muffinDrpDown">Muffins</a>
+            <a href="#" id="sandwichDrpDown">Sandwiches</a>
+            <a href="#" id="bagelDrpDown">Bagel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Locations
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content container">
+            <a href="#">Canton, MI</a>
+            <a href="#">Grand Rapids, MI</a>
+            <a href="#">Belleville, MI</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            About us
+            <i class="fa fa-caret-down"></i>
+          </button>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onClick="showCartContainer(event)">
+            <i style="font-size:24px" class="fa">&#xf07a;</i>
+          </button>
+        </div>
+      </div>
+    </header>
+    
+    <div id="mainPageContainer">
+      <div id="Coldbrew">
+        <img src="./assets/cold brew.jpeg" alt="Coldbrew Coffee" id="coldbrewPNG"/>
+        <div id ="coldBrewInfo">
+          <p id="cbheader">Vanilla Sweet Cream Cold Brew</p>
+          <p id="coldbrewParagraph">
+            Our slow-steeped custom blend of Cold Brew coffee accented with vanilla and topped with a delicate float of house-made vanilla sweet cream that cascades throughout the cup. It's over-the-top and super-smooth.
+            <p class="nutrition">
+            110 calories, 14g sugar, 5g fat
+            </p> 
+          </p>
+        </div>
+      </div>
+      <div id="Chaitea">
+        <img src="./assets/chai.jpeg" alt="Chaitea" id="chaiteaPNG" />
+        <div id = "chaiTeaInfo">
+          <p id="ctheader">Chai Tea Latte</p>
+          <p id="chaiParagraph">
+            Black tea infused with cinnamon, clove and other warming spices is combined with steamed milk and topped with foam for the perfect balance of sweet and spicy. An iconic chai cup.
+            <p class="nutrition" >
+              240 calories, 42g sugar, 4.5g fat
+            </p>
+          </p>
+        </div>
+        </div>
+        <!-- create on-click to take user to different page -->
+      </div>
+    </div>
+    <div id="coffeePage" class="hidden container">
+      <div class="coldBrew product">
+        <div>
+          <img src="./assets/cold brew.jpeg" alt="Cold Brew" />
+          <p class="prodTitle">Vanilla Sweet Cream Cold Brew</p>
+          <p>$4.25</p>
+          <button onclick="addColdBrew()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="caramelLatte product">
+        <div>
+          <img src="./assets/caramel latte.jpg" alt=" caramel latte"/>
+          <p class="prodTitle">Caramel Latte</p>
+          <p>$5.25</p>
+          <button onclick="addCL()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="hotChocolatePage" class="hidden container">
+      <div class="hotChocolate product">
+        <div>
+          <img src="./assets/hot chocolate 1.jpg" alt="hot chocolate"/>
+          <p class="prodTitle">Hot Chocolate</p>
+          <p>$3.50</p>
+          <button onclick="addHC()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="whiteHC product">
+        <div>
+          <img src="./assets/White Hot Chocolate.jfif" alt="white hot chocolate"/>
+          <p class="prodTitle">White Hot Chocolate</p>
+          <p>$4.25</p>
+          <button onclick="addWHC()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="teaPage" class="hidden container">
+      <div class="chaiTea product">
+        <div>
+          <img src="./assets/chai.jpeg" alt="chai tea"/>
+          <p class="prodTitle">Chai Tea</p>
+          <p>$4.25</p>
+          <button onclick="addChaiTea()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="matchaTea product">
+        <div>
+          <img src="./assets/matcha mug 1.jpg" alt="matcha tea"/>
+          <p class="prodTitle">Matcha Tea</p>
+          <p>$4.50</p>
+          <button onclick="addMatchaTea()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="muffinsPage" class="hidden container">
+      <div class="bananaNut product">
+        <div>
+          <img src="./assets/muffins 1.jpg" alt="banana nut muffin"/>
+          <p class="prodTitle">Banana Nut Muffin</p>
+          <p>$3.00</p>
+          <button onclick="addBNM()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="chocolateMuffin product">
+        <div>
+          <img src="./assets/chocolate muffin.jpg" alt="chocolate muffin" />
+          <p class="prodTitle">Chocolate Muffin</p>
+          <p>$3.00</p>
+          <button onclick="addCM()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="sandwichPage" class="hidden container ">
+      <div class="BaconEgg product">
+        <div>
+          <img src="./assets/bacon egg and cheese 2.jpg" alt="bacon egg and cheese"/>
+          <p class="prodTitle">Bacon Egg & Cheese</p>
+          <p>$4.50</p>
+          <button onclick="addBEC()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="sausageEgg product">
+        <div>
+          <img src="./assets/sausage egg and cheese.jpg" alt="sausage egg and cheese"/>
+          <p class="prodTitle">Sausage Egg & Cheese</p>
+          <p>$4.50</p>
+          <button onclick="addSEC()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="bagelPage" class="hidden container">
+      <div class="saltyBagel product">
+        <div>
+          <img src="./assets/salt bagel.jpeg" alt="salt bagel" />
+          <p class="prodTitle">Sam's Salty Bagel</p>
+          <p>$6.00</p>
+          <button onclick="addSSB()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="asiagoBagel product">
+        <div>
+          <img src="./assets/asiago bagel.jpg" alt="asiago bagel" />
+          <p class="prodTitle">Asiago Bagel</p>
+          <p>$4.25</p>
+          <button onclick="addAB()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="CartContainer container hidden">
+      <div class="shoppingCart">
+        <h1 class="Heading">Shopping Cart</h1>
+        <h2 class="Action" onclick="removeItems()">Remove all</h2>
+      </div>
+      
+      <div class="cartItems"></div>
+      <div class="paySummary">
+        <p class="subtotal"></p>
+        <p class="taxes"></p>
+        <p class="total"></p>
+      </div>
+      
+      <div class = "payOptions hidden">
+        <form>
+          <h1 class="payMethodHeading">Payment Method:</h1>
+          <input type="radio" id="cashMethod" name="paymentMethod" value="Cash"/>
+          <label for="cashMethod">Cash</label><br />
+          <input type="radio" id="cardMethod" name="paymentMethod" value="Card"/>
+          <label for="cardMethod">Card</label><br />
+          <br />
+          <input class="paymentMethodSubmit" type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="cashOption hidden">
+        <form class="cashForm" id="cashForm">
+          <label for="givenAmount">Amount Given</label>
+          <input type="text" id="givenAmount" name="given" /><br /><br />
+          <input class="cashSubmit"type="submit" value="Continue to checkout"/>
+        </form>
+      </div>
+      <div class="cardOption hidden">
+        <form>
+          <div class="row">
+            <div class="col-75">
+              <div class="cardcontainer">
+                <form action="/action_page.php">
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname"
+                      ><i class="fa fa-user"></i> Full Name</label
+                      >
+                      <input
+                      type="text"
+                      id="fname"
+                      name="firstname"
+                      placeholder="John M. Doe"
+                      />
+                      <label for="email"
+                      ><i class="fa fa-envelope"></i> Email</label
+                      >
+                      <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="john@example.com"
+                      />
+                      <label for="adr"
+                      ><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"/>
+                        <label for="city"
+                        ><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="New York"/>
+                        <div class="row">
+                          <div class="col-50">
+                            <label for="state">State</label>
+                            <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder="NY"
+                          />
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Zip</label>
+                          <input
+                          type="text"
+                          id="zip"
+                          name="zip"
+                          placeholder="10001"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      <label for="fname">Accepted Cards</label>
+                      <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color: navy"></i>
+                        <i class="fa fa-cc-amex" style="color: blue"></i>
+                        <i class="fa fa-cc-mastercard" style="color: red"></i>
+                        <i class="fa fa-cc-discover" style="color: orange"></i>
+                      </div>
+                      <label for="cname">Name on Card</label>
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe"/>
+                      <label for="ccnum">Credit card number</label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
+                      <label for="expmonth">Exp Month</label>
+                      <input
+                        type="text"
+                        id="expmonth"
+                        name="expmonth"
+                        placeholder="September"
+                        />
+                        <div class="row">
+                          <div class="col-50">
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="2018"/>
+                          </div>
+                          <div class="col-50">
+                            <label for="cvv">CVV</label>
+                          <input type="text" id="cvv" name="cvv"placeholder="352"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr" />
+                    Shipping address same as billing
+                  </label>
+                  <input class="cardSubmit" type="submit" value="Continue to checkout" class="btn"/>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="receiptPayment hidden">
+        <div>
+          <div class="cashGiven">
+            <p>Amount Given</p>
+          </div>
+          <div class = "changeAmount">
+            <p>Change</p>
+          </div>
+        </div>
+        
+        <div>
+          <div class="cardGiven">
+            <p>Amount Tendered</p>
+          </div>
+          <div class ="orderName">
+            <p>Order Name:</p>
+          </div>
+        </div>
+        
+      </div>
+      <button class="checkout">Checkout</button>
+    </div>
+   
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
