@@ -46,7 +46,6 @@ html {
     width: 100vw;
     margin-right: 20px;
     box-shadow: 1px 1px 5px #9a7a65(43, 42, 42, 0.142);
-  
     padding: 10px;
     justify-content: flex-end;
     align-items: center;
@@ -121,20 +120,6 @@ html {
     color: white;
   }
   
-  
-  #EYLogo {
-    height: 350px;
-    z-index: 1;
-    position: relative;
-  }
-  
-  #EYPicture {
-    width: 100%;
-    position: absolute;
-    opacity: .7;
-    top: -4em;
-  }
-  
   p {
     color: #403D3C;
     font-size: 25px;
@@ -178,7 +163,7 @@ html {
   }
   
   /* main page featured items */
-  #mainPageContainer{
+  .mainPage{
     margin-top: 35px;
     display: flex;
     flex-direction: row;
@@ -201,10 +186,10 @@ html {
     border-radius: 3%;
     height: 500px;
     box-shadow: 0px 5px 10px #4c5148;
-
     display: flex;
     justify-content: space-between;
     margin: 30px;
+    overflow: hidden;
   }
   
   #chaiteaPNG {
@@ -515,10 +500,7 @@ html {
   
   /* product container styling*/
   
-  #muffinsPage{
-    display: flex;
-    flex-direction: row;
-  }
+
   
   .product {
     width: 60%;
@@ -623,14 +605,7 @@ html {
   }
   
   @media only screen and (min-width: 600px) {
-    /* .logo img {
-      height: 12%;
-      width: 12%;
-      object-fit: cover;
-      object-position: 58% 29%;
-      position: absolute;
-      padding-left: 10px;
-    } */
+  
   
     #coldBrewInfo {
       padding-top: 60px;
